@@ -1,0 +1,446 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CF0EEAA11AE7834100B264C2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CF0EEAA01AE7834100B264C2 /* main.m */; };
+		CF0EEAA41AE7834100B264C2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CF0EEAA31AE7834100B264C2 /* AppDelegate.m */; };
+		CF0EEAA71AE7834100B264C2 /* PanoramX.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CF0EEAA51AE7834100B264C2 /* PanoramX.xcdatamodeld */; };
+		CF0EEAAA1AE7834100B264C2 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF0EEAA91AE7834100B264C2 /* ViewController.m */; };
+		CF0EEAAD1AE7834100B264C2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF0EEAAB1AE7834100B264C2 /* Main.storyboard */; };
+		CF0EEAAF1AE7834100B264C2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF0EEAAE1AE7834100B264C2 /* Images.xcassets */; };
+		CF0EEAB21AE7834100B264C2 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF0EEAB01AE7834100B264C2 /* LaunchScreen.xib */; };
+		CF0EEABE1AE7834100B264C2 /* PanoramXTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CF0EEABD1AE7834100B264C2 /* PanoramXTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CF0EEAB81AE7834100B264C2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CF0EEA931AE7834100B264C2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CF0EEA9A1AE7834100B264C2;
+			remoteInfo = PanoramX;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		CF0EEA9B1AE7834100B264C2 /* PanoramX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PanoramX.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CF0EEA9F1AE7834100B264C2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CF0EEAA01AE7834100B264C2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		CF0EEAA21AE7834100B264C2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		CF0EEAA31AE7834100B264C2 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		CF0EEAA61AE7834100B264C2 /* PanoramX.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PanoramX.xcdatamodel; sourceTree = "<group>"; };
+		CF0EEAA81AE7834100B264C2 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		CF0EEAA91AE7834100B264C2 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		CF0EEAAC1AE7834100B264C2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CF0EEAAE1AE7834100B264C2 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		CF0EEAB11AE7834100B264C2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		CF0EEAB71AE7834100B264C2 /* PanoramXTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PanoramXTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CF0EEABC1AE7834100B264C2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CF0EEABD1AE7834100B264C2 /* PanoramXTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PanoramXTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CF0EEA981AE7834100B264C2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CF0EEAB41AE7834100B264C2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CF0EEA921AE7834100B264C2 = {
+			isa = PBXGroup;
+			children = (
+				CF0EEA9D1AE7834100B264C2 /* PanoramX */,
+				CF0EEABA1AE7834100B264C2 /* PanoramXTests */,
+				CF0EEA9C1AE7834100B264C2 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CF0EEA9C1AE7834100B264C2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CF0EEA9B1AE7834100B264C2 /* PanoramX.app */,
+				CF0EEAB71AE7834100B264C2 /* PanoramXTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CF0EEA9D1AE7834100B264C2 /* PanoramX */ = {
+			isa = PBXGroup;
+			children = (
+				CF0EEAA21AE7834100B264C2 /* AppDelegate.h */,
+				CF0EEAA31AE7834100B264C2 /* AppDelegate.m */,
+				CF0EEAA81AE7834100B264C2 /* ViewController.h */,
+				CF0EEAA91AE7834100B264C2 /* ViewController.m */,
+				CF0EEAAB1AE7834100B264C2 /* Main.storyboard */,
+				CF0EEAAE1AE7834100B264C2 /* Images.xcassets */,
+				CF0EEAB01AE7834100B264C2 /* LaunchScreen.xib */,
+				CF0EEAA51AE7834100B264C2 /* PanoramX.xcdatamodeld */,
+				CF0EEA9E1AE7834100B264C2 /* Supporting Files */,
+			);
+			path = PanoramX;
+			sourceTree = "<group>";
+		};
+		CF0EEA9E1AE7834100B264C2 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CF0EEA9F1AE7834100B264C2 /* Info.plist */,
+				CF0EEAA01AE7834100B264C2 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CF0EEABA1AE7834100B264C2 /* PanoramXTests */ = {
+			isa = PBXGroup;
+			children = (
+				CF0EEABD1AE7834100B264C2 /* PanoramXTests.m */,
+				CF0EEABB1AE7834100B264C2 /* Supporting Files */,
+			);
+			path = PanoramXTests;
+			sourceTree = "<group>";
+		};
+		CF0EEABB1AE7834100B264C2 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CF0EEABC1AE7834100B264C2 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CF0EEA9A1AE7834100B264C2 /* PanoramX */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CF0EEAC11AE7834100B264C2 /* Build configuration list for PBXNativeTarget "PanoramX" */;
+			buildPhases = (
+				CF0EEA971AE7834100B264C2 /* Sources */,
+				CF0EEA981AE7834100B264C2 /* Frameworks */,
+				CF0EEA991AE7834100B264C2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PanoramX;
+			productName = PanoramX;
+			productReference = CF0EEA9B1AE7834100B264C2 /* PanoramX.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CF0EEAB61AE7834100B264C2 /* PanoramXTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CF0EEAC41AE7834100B264C2 /* Build configuration list for PBXNativeTarget "PanoramXTests" */;
+			buildPhases = (
+				CF0EEAB31AE7834100B264C2 /* Sources */,
+				CF0EEAB41AE7834100B264C2 /* Frameworks */,
+				CF0EEAB51AE7834100B264C2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CF0EEAB91AE7834100B264C2 /* PBXTargetDependency */,
+			);
+			name = PanoramXTests;
+			productName = PanoramXTests;
+			productReference = CF0EEAB71AE7834100B264C2 /* PanoramXTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CF0EEA931AE7834100B264C2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0620;
+				ORGANIZATIONNAME = "Adrien Casagrande";
+				TargetAttributes = {
+					CF0EEA9A1AE7834100B264C2 = {
+						CreatedOnToolsVersion = 6.2;
+					};
+					CF0EEAB61AE7834100B264C2 = {
+						CreatedOnToolsVersion = 6.2;
+						TestTargetID = CF0EEA9A1AE7834100B264C2;
+					};
+				};
+			};
+			buildConfigurationList = CF0EEA961AE7834100B264C2 /* Build configuration list for PBXProject "PanoramX" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CF0EEA921AE7834100B264C2;
+			productRefGroup = CF0EEA9C1AE7834100B264C2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CF0EEA9A1AE7834100B264C2 /* PanoramX */,
+				CF0EEAB61AE7834100B264C2 /* PanoramXTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CF0EEA991AE7834100B264C2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CF0EEAAD1AE7834100B264C2 /* Main.storyboard in Resources */,
+				CF0EEAB21AE7834100B264C2 /* LaunchScreen.xib in Resources */,
+				CF0EEAAF1AE7834100B264C2 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CF0EEAB51AE7834100B264C2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CF0EEA971AE7834100B264C2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CF0EEAA41AE7834100B264C2 /* AppDelegate.m in Sources */,
+				CF0EEAA11AE7834100B264C2 /* main.m in Sources */,
+				CF0EEAAA1AE7834100B264C2 /* ViewController.m in Sources */,
+				CF0EEAA71AE7834100B264C2 /* PanoramX.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CF0EEAB31AE7834100B264C2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CF0EEABE1AE7834100B264C2 /* PanoramXTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CF0EEAB91AE7834100B264C2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CF0EEA9A1AE7834100B264C2 /* PanoramX */;
+			targetProxy = CF0EEAB81AE7834100B264C2 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		CF0EEAAB1AE7834100B264C2 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CF0EEAAC1AE7834100B264C2 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		CF0EEAB01AE7834100B264C2 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CF0EEAB11AE7834100B264C2 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CF0EEABF1AE7834100B264C2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CF0EEAC01AE7834100B264C2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CF0EEAC21AE7834100B264C2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = PanoramX/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		CF0EEAC31AE7834100B264C2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = PanoramX/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		CF0EEAC51AE7834100B264C2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = PanoramXTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PanoramX.app/PanoramX";
+			};
+			name = Debug;
+		};
+		CF0EEAC61AE7834100B264C2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = PanoramXTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PanoramX.app/PanoramX";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CF0EEA961AE7834100B264C2 /* Build configuration list for PBXProject "PanoramX" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CF0EEABF1AE7834100B264C2 /* Debug */,
+				CF0EEAC01AE7834100B264C2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CF0EEAC11AE7834100B264C2 /* Build configuration list for PBXNativeTarget "PanoramX" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CF0EEAC21AE7834100B264C2 /* Debug */,
+				CF0EEAC31AE7834100B264C2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		CF0EEAC41AE7834100B264C2 /* Build configuration list for PBXNativeTarget "PanoramXTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CF0EEAC51AE7834100B264C2 /* Debug */,
+				CF0EEAC61AE7834100B264C2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		CF0EEAA51AE7834100B264C2 /* PanoramX.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				CF0EEAA61AE7834100B264C2 /* PanoramX.xcdatamodel */,
+			);
+			currentVersion = CF0EEAA61AE7834100B264C2 /* PanoramX.xcdatamodel */;
+			path = PanoramX.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = CF0EEA931AE7834100B264C2 /* Project object */;
+}
