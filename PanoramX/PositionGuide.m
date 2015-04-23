@@ -11,7 +11,6 @@
 @implementation PositionGuide
 
 - (void)setupHeight:(int)height {
-
 }
 
 

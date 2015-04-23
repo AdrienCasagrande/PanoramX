@@ -59,8 +59,7 @@ CGRect baseButtonframe;
     [_resetButton setTitle:@"Reset" forState:UIControlStateNormal]; // titre
     [_resetButton addTarget:self action:@selector(resetSel) forControlEvents:UIControlEventTouchUpInside]; // la fonction du bouton
     [_overlay addSubview:_resetButton]; // on l ajoute a la page
-    
-    [_shootButton setBackgroundColor:[UIColor whiteColor]];
+    [_resetButton setBackgroundColor:[UIColor whiteColor]];
     
     // bouton shoot
     _shootButton = [[UIButton alloc] initWithFrame:baseButtonframe];
@@ -69,8 +68,13 @@ CGRect baseButtonframe;
     [_shootButton setTitle:@"Shoot" forState:UIControlStateNormal];
     [_shootButton addTarget:self action:@selector(shootSel) forControlEvents:UIControlEventTouchUpInside];
     [_overlay addSubview:_shootButton];
-    
     [_shootButton setBackgroundColor:[UIColor whiteColor]];
+    
+    _finishButton = [[UIButton alloc] initWithFrame:baseButtonframe];
+    _finishButton.center = CGPointMake(_resetButton.center.x + _finishButton.frame.size.width, _resetButton.center.y);
+    [_finishButton setTitle:@"Finish" forState:UIControlStateNormal];
+    [_finishButton addTarget:self action:@selector(finishSel) forControlEvents:UIControlEventTouchUpInside];
+    [_overlay addSubview:_finishButton];
 }
 
 - (void)setupGuides {
@@ -140,6 +144,14 @@ CGRect baseButtonframe;
     [_picker takePicture];
 }
 
+- (void)finishSel {
+    UIImage *img = [self mergeIMG:_pics withParams:YES height:2];
+    UIImageView *imgView = [[UIImageView alloc] initWithImage:img];
+    imgView.contentMode = UIViewContentModeScaleAspectFit;
+    [imgView setFrame:CGRectMake(0, 0, imgView.frame.size.width * 0.5, imgView.frame.size.height * 0.5)];
+    imgView.center = self.view.center;
+}
+
 #pragma mark Image picker
 
 - (void)showPicker {
@@ -173,6 +185,39 @@ CGRect baseButtonframe;
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+#pragma mark IMG Merge
+
+- (UIImage *)mergeIMG:(NSMutableArray *)pics withParams:(BOOL)leftToRight height:(int)height {
+    float w = _overlay.frame.size.width * (pics.count / height) * (1 - bordure);
+    float h = _overlay.frame.size.height * height * (1 - bordure);
+    CGSize size = CGSizeMake(w, h);
+    UIGraphicsBeginImageContext(size);
+    
+    for (int i = 0; i < _pics.count; i++) {
+        [(UIImage *)_pics[i] drawAtPoint:[self positionWith:leftToRight height:height iteration:i]];
+    }
+    
+    UIImage *img = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    return img;
+}
+
+- (CGPoint)positionWith:(BOOL)leftToRight height:(int)height iteration:(int)i {
+    CGPoint pt = CGPointMake(0, 0);
+    int row = ++i % height;
+    int col = (i + height - 1) / height;
+    
+    pt.y = row * _overlay.frame.size.height;
+    if (leftToRight) {
+        pt.x = col * _overlay.frame.size.width;
+    } else {
+        
+    }
+    
+    return pt;
 }
 
 @end
