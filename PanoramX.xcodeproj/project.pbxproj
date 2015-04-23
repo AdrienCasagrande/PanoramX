@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7A9FB4521AE9618C006A48AB /* PositionGuide.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A9FB4511AE9618C006A48AB /* PositionGuide.m */; };
+		7A9FB4551AE9637C006A48AB /* UIView+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A9FB4541AE9637C006A48AB /* UIView+Utils.m */; };
 		CF0EEAA11AE7834100B264C2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CF0EEAA01AE7834100B264C2 /* main.m */; };
 		CF0EEAA41AE7834100B264C2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CF0EEAA31AE7834100B264C2 /* AppDelegate.m */; };
 		CF0EEAA71AE7834100B264C2 /* PanoramX.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CF0EEAA51AE7834100B264C2 /* PanoramX.xcdatamodeld */; };
@@ -28,6 +30,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7A9FB4501AE9618C006A48AB /* PositionGuide.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PositionGuide.h; sourceTree = "<group>"; };
+		7A9FB4511AE9618C006A48AB /* PositionGuide.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PositionGuide.m; sourceTree = "<group>"; };
+		7A9FB4531AE9637C006A48AB /* UIView+Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Utils.h"; sourceTree = "<group>"; };
+		7A9FB4541AE9637C006A48AB /* UIView+Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Utils.m"; sourceTree = "<group>"; };
 		CF0EEA9B1AE7834100B264C2 /* PanoramX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PanoramX.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF0EEA9F1AE7834100B264C2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CF0EEAA01AE7834100B264C2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -92,6 +98,10 @@
 				CF0EEAB01AE7834100B264C2 /* LaunchScreen.xib */,
 				CF0EEAA51AE7834100B264C2 /* PanoramX.xcdatamodeld */,
 				CF0EEA9E1AE7834100B264C2 /* Supporting Files */,
+				7A9FB4501AE9618C006A48AB /* PositionGuide.h */,
+				7A9FB4511AE9618C006A48AB /* PositionGuide.m */,
+				7A9FB4531AE9637C006A48AB /* UIView+Utils.h */,
+				7A9FB4541AE9637C006A48AB /* UIView+Utils.m */,
 			);
 			path = PanoramX;
 			sourceTree = "<group>";
@@ -223,7 +233,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7A9FB4551AE9637C006A48AB /* UIView+Utils.m in Sources */,
 				CF0EEAA41AE7834100B264C2 /* AppDelegate.m in Sources */,
+				7A9FB4521AE9618C006A48AB /* PositionGuide.m in Sources */,
 				CF0EEAA11AE7834100B264C2 /* main.m in Sources */,
 				CF0EEAAA1AE7834100B264C2 /* ViewController.m in Sources */,
 				CF0EEAA71AE7834100B264C2 /* PanoramX.xcdatamodeld in Sources */,

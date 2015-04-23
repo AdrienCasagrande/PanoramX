@@ -16,7 +16,6 @@ float const bordure = 0.1;
 
 @implementation ViewController
 
-int i;
 float overlayWidth;
 float overlayHeight;
 CGRect baseButtonframe;
@@ -24,7 +23,6 @@ CGRect baseButtonframe;
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    i = 0;
     _pics = [[NSMutableArray alloc] init];
     baseButtonframe = CGRectMake(0, 0, 100, 100);
     _overlap = [NSDictionary dictionaryWithObjectsAndKeys:[[UIImageView alloc] initWithFrame:self.view.bounds], @"down",
@@ -58,7 +56,7 @@ CGRect baseButtonframe;
     _resetButton = [[UIButton alloc] initWithFrame:baseButtonframe]; // initialiser le bouton
     _resetButton.center = CGPointMake(_overlay.frame.size.width * 0.5,
                                       baseButtonframe.size.height); // rectangle du bouton
-    [_resetButton setTitle:@"Shoot" forState:UIControlStateNormal]; // titre
+    [_resetButton setTitle:@"Reset" forState:UIControlStateNormal]; // titre
     [_resetButton addTarget:self action:@selector(resetSel) forControlEvents:UIControlEventTouchUpInside]; // la fonction du bouton
     [_overlay addSubview:_resetButton]; // on l ajoute a la page
     
@@ -95,17 +93,44 @@ CGRect baseButtonframe;
     [_overlay.layer addSublayer:shapeLayer];
 }
 
-- (void)displayOverlap {
-    [_overlay insertSubview:_overlap[@"down"] atIndex:0];
+- (void)setupPositionGuide {
     
-    [UIView animateWithDuration:0.3 animations:^{
-        [(UIImageView *) _overlap[@"down"] setFrame:CGRectMake(0, overlayHeight * (1 - bordure),
-                                                               overlayWidth, overlayHeight)];
-        [(UIImageView *) _overlap[@"down"] setAlpha:0.5];
-    }];
+}
+
+- (void)displayOverlap {
+    if (_pics.count % 2 == 1) {
+        [_overlay insertSubview:_overlap[@"down"] atIndex:0];
+        [UIView animateWithDuration:0.5 animations:^{
+            [(UIImageView *) _overlap[@"down"] setFrame:CGRectMake(0, overlayHeight * (1 - bordure),
+                                                                   overlayWidth, overlayHeight)];
+            [(UIImageView *) _overlap[@"down"] setAlpha:0.8];
+        }];
+    }
+    else {
+        [_overlay insertSubview:_overlap[@"left"] atIndex:0];
+        [UIView animateWithDuration:0.5 animations:^{
+            [(UIImageView *) _overlap[@"down"] setFrame:CGRectMake(- overlayWidth * (1 - bordure), 0,
+                                                                   overlayWidth, overlayHeight)];
+            [(UIImageView *) _overlap[@"left"] setFrame:CGRectMake(- overlayWidth * (1 - bordure), - overlayHeight * (1 - bordure),
+                                                                   overlayWidth, overlayHeight)];
+            [(UIImageView *) _overlap[@"left"] setAlpha:0.8];
+        }];
+    }
 }
 
 #pragma mark Button selectors
+
+- (void)resetSel {
+    _pics = [[NSMutableArray alloc] init];
+    
+    for (NSString *key in _overlap) {
+        [[_overlap objectForKey:key] removeFromSuperview];
+    }
+    
+    _overlap = [NSDictionary dictionaryWithObjectsAndKeys:
+                [[UIImageView alloc] initWithFrame:self.view.bounds], @"down",
+                [[UIImageView alloc] initWithFrame:self.view.bounds], @"left", nil];
+}
 
 - (void)shootSel {
     [_picker takePicture];
@@ -128,9 +153,13 @@ CGRect baseButtonframe;
 
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
     [_pics addObject:info[UIImagePickerControllerOriginalImage]];
-    [_overlap[@"down"] setImage:info[UIImagePickerControllerOriginalImage]];
+    if (_pics.count % 2 == 1) {
+        [_overlap[@"down"] setImage:info[UIImagePickerControllerOriginalImage]];
+    } else {
+        [_overlap[@"left"] setImage:info[UIImagePickerControllerOriginalImage]];
+    }
     [self displayOverlap];
-    NSLog(@"%u", _pics.count);
+    NSLog(@"%lu", (unsigned long)_pics.count);
 }
 
 - (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker {
