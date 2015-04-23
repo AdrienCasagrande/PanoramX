@@ -8,8 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 
+@property (strong, nonatomic) UIView *overlay;
+@property (strong, nonatomic) UIButton *resetButton;
+@property (strong, nonatomic) UIButton *shootButton;
+@property (strong, nonatomic) NSDictionary *overlap;
+
+@property (strong, nonatomic) UIImagePickerController *picker;
+@property (strong, nonatomic) NSMutableArray *pics;
 
 @end
 
