@@ -10,8 +10,9 @@
 
 @implementation PositionGuide
 
-- (void)setup {
-    
+- (void)setupHeight:(int)height {
+
 }
+
 
 @end
