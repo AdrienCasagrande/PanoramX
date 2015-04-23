@@ -62,6 +62,8 @@ CGRect baseButtonframe;
     [_resetButton addTarget:self action:@selector(resetSel) forControlEvents:UIControlEventTouchUpInside]; // la fonction du bouton
     [_overlay addSubview:_resetButton]; // on l ajoute a la page
     
+    [_shootButton setBackgroundColor:[UIColor whiteColor]];
+    
     // bouton shoot
     _shootButton = [[UIButton alloc] initWithFrame:baseButtonframe];
     _shootButton.center = CGPointMake(_overlay.frame.size.width * 0.5,
@@ -69,6 +71,8 @@ CGRect baseButtonframe;
     [_shootButton setTitle:@"Shoot" forState:UIControlStateNormal];
     [_shootButton addTarget:self action:@selector(shootSel) forControlEvents:UIControlEventTouchUpInside];
     [_overlay addSubview:_shootButton];
+    
+    [_shootButton setBackgroundColor:[UIColor whiteColor]];
 }
 
 - (void)setupGuides {
