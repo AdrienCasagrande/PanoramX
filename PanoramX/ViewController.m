@@ -69,11 +69,8 @@ CGRect baseButtonframe;
     _shootButton = [[UIButton alloc] initWithFrame:baseButtonframe];
     _shootButton.center = CGPointMake(_overlay.frame.size.width * 0.5,
                                       _overlay.frame.size.height - baseButtonframe.size.height);
-    //[_shootButton setTitle:@"Shoot" forState:UIControlStateNormal];
     [_shootButton addTarget:self action:@selector(shootSel) forControlEvents:UIControlEventTouchUpInside];
-    
     UIImage *buttonCapture = [UIImage imageNamed:@"toto.png"];
-    NSLog(@"%@", buttonCapture);
     [_shootButton setBackgroundImage:buttonCapture forState:UIControlStateNormal];
     [_overlay addSubview:_shootButton];
     
@@ -148,6 +145,7 @@ CGRect baseButtonframe;
     _overlap = [NSDictionary dictionaryWithObjectsAndKeys:
                 [[UIImageView alloc] initWithFrame:self.view.bounds], @"down",
                 [[UIImageView alloc] initWithFrame:self.view.bounds], @"left", nil];
+    [_preview removeFromSuperview];
 }
 
 - (void)shootSel {
@@ -156,11 +154,11 @@ CGRect baseButtonframe;
 
 - (void)finishSel {
     UIImage *img = [self mergeIMG:_pics withParams:YES height:2];
-    UIImageView *imgView = [[UIImageView alloc] initWithFrame:baseButtonframe];
-    imgView.center = self.view.center;
-    imgView.contentMode = UIViewContentModeScaleAspectFit;
-    [imgView setImage:img];
-    [_overlay addSubview:imgView];
+    _preview = [[UIImageView alloc] initWithFrame:baseButtonframe];
+    _preview.center = self.view.center;
+    _preview.contentMode = UIViewContentModeScaleAspectFit;
+    [_preview setImage:img];
+    [_overlay addSubview:_preview];
     NSLog(@"Hello World!");
 }
 

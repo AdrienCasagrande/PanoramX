@@ -19,6 +19,7 @@
 
 @property (strong, nonatomic) UIImagePickerController *picker;
 @property (strong, nonatomic) NSMutableArray *pics;
+@property (strong, nonatomic) UIImageView *preview;
 
 @end
 
