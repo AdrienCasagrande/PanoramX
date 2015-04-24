@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		51E431CE1AEA80F200CAB4E3 /* icon-photo.png in Resources */ = {isa = PBXBuildFile; fileRef = 51E431CD1AEA80F200CAB4E3 /* icon-photo.png */; };
 		51E431D01AEA833700CAB4E3 /* validate_360.png in Resources */ = {isa = PBXBuildFile; fileRef = 51E431CF1AEA833700CAB4E3 /* validate_360.png */; };
 		7A9FB4521AE9618C006A48AB /* PositionGuide.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A9FB4511AE9618C006A48AB /* PositionGuide.m */; };
 		7A9FB4551AE9637C006A48AB /* UIView+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A9FB4541AE9637C006A48AB /* UIView+Utils.m */; };
@@ -32,7 +31,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		51E431CD1AEA80F200CAB4E3 /* icon-photo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-photo.png"; sourceTree = "<group>"; };
 		51E431CF1AEA833700CAB4E3 /* validate_360.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = validate_360.png; sourceTree = "<group>"; };
 		7A9FB4501AE9618C006A48AB /* PositionGuide.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PositionGuide.h; sourceTree = "<group>"; };
 		7A9FB4511AE9618C006A48AB /* PositionGuide.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PositionGuide.m; sourceTree = "<group>"; };
@@ -98,7 +96,6 @@
 				51E431CF1AEA833700CAB4E3 /* validate_360.png */,
 				CF0EEAA81AE7834100B264C2 /* ViewController.h */,
 				CF0EEAA91AE7834100B264C2 /* ViewController.m */,
-				51E431CD1AEA80F200CAB4E3 /* icon-photo.png */,
 				CF0EEAAB1AE7834100B264C2 /* Main.storyboard */,
 				CF0EEAAE1AE7834100B264C2 /* Images.xcassets */,
 				CF0EEAB01AE7834100B264C2 /* LaunchScreen.xib */,
@@ -220,7 +217,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				CF0EEAAD1AE7834100B264C2 /* Main.storyboard in Resources */,
-				51E431CE1AEA80F200CAB4E3 /* icon-photo.png in Resources */,
 				CF0EEAB21AE7834100B264C2 /* LaunchScreen.xib in Resources */,
 				51E431D01AEA833700CAB4E3 /* validate_360.png in Resources */,
 				CF0EEAAF1AE7834100B264C2 /* Images.xcassets in Resources */,

@@ -72,13 +72,12 @@ CGRect baseButtonframe;
     [_shootButton setTitle:@"Shoot" forState:UIControlStateNormal];
     [_shootButton addTarget:self action:@selector(shootSel) forControlEvents:UIControlEventTouchUpInside];
     
-    UIImage *buttonCapture = [UIImage imageNamed:@"icon-photo.png"];
-    [_resetButton setBackgroundImage:buttonCapture forState:UIControlStateNormal];
+    //UIImage *buttonCapture = [UIImage imageNamed:@"icon-photo.png"];
+    //[_resetButton setBackgroundImage:buttonCapture forState:UIControlStateNormal];
     [_overlay addSubview:_shootButton];
     
     _finishButton = [[UIButton alloc] initWithFrame:baseButtonframe];
     _finishButton.center = CGPointMake(_resetButton.center.x + _finishButton.frame.size.width, _resetButton.center.y);
-    [_finishButton setTitle:@"Finish" forState:UIControlStateNormal];
     [_finishButton addTarget:self action:@selector(finishSel) forControlEvents:UIControlEventTouchUpInside];
     
     UIImage *buttonFinish = [UIImage imageNamed:@"validate_360.png"];
@@ -216,7 +215,7 @@ CGRect baseButtonframe;
 
 - (CGPoint)positionWith:(BOOL)leftToRight height:(int)height iteration:(int)i {
     CGPoint pt = CGPointMake(0, 0);
-    int row = i % height;
+    int row = (i + 1) % height;
     int col = (i + height - 1) / height;
     
     pt.y = row * _overlay.frame.size.height;
