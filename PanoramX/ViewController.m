@@ -69,11 +69,12 @@ CGRect baseButtonframe;
     _shootButton = [[UIButton alloc] initWithFrame:baseButtonframe];
     _shootButton.center = CGPointMake(_overlay.frame.size.width * 0.5,
                                       _overlay.frame.size.height - baseButtonframe.size.height);
-    [_shootButton setTitle:@"Shoot" forState:UIControlStateNormal];
+    //[_shootButton setTitle:@"Shoot" forState:UIControlStateNormal];
     [_shootButton addTarget:self action:@selector(shootSel) forControlEvents:UIControlEventTouchUpInside];
     
-    UIImage *buttonCapture = [UIImage imageNamed:@"icon-photo_360.png"];
-    [_resetButton setBackgroundImage:buttonCapture forState:UIControlStateNormal];
+    UIImage *buttonCapture = [UIImage imageNamed:@"toto.png"];
+    NSLog(@"%@", buttonCapture);
+    [_shootButton setBackgroundImage:buttonCapture forState:UIControlStateNormal];
     [_overlay addSubview:_shootButton];
     
     _finishButton = [[UIButton alloc] initWithFrame:baseButtonframe];
