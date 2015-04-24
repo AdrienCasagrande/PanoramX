@@ -39,10 +39,15 @@ CGRect baseButtonframe;
     [self showPicker];
 }
 
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
 #pragma mark UI
 
 - (void)overlaySetup {
-    _overlay = [[UIView alloc] initWithFrame:self.view.bounds];
+    _overlay = [[UIView alloc] initWithFrame:self.view.frame];
     overlayHeight = _overlay.frame.size.height;
     overlayWidth = _overlay.frame.size.width;
     [self setupButtons];
@@ -59,7 +64,6 @@ CGRect baseButtonframe;
     [_resetButton setTitle:@"Reset" forState:UIControlStateNormal]; // titre
     [_resetButton addTarget:self action:@selector(resetSel) forControlEvents:UIControlEventTouchUpInside]; // la fonction du bouton
     [_overlay addSubview:_resetButton]; // on l ajoute a la page
-    [_resetButton setBackgroundColor:[UIColor whiteColor]];
     
     // bouton shoot
     _shootButton = [[UIButton alloc] initWithFrame:baseButtonframe];
@@ -68,7 +72,6 @@ CGRect baseButtonframe;
     [_shootButton setTitle:@"Shoot" forState:UIControlStateNormal];
     [_shootButton addTarget:self action:@selector(shootSel) forControlEvents:UIControlEventTouchUpInside];
     [_overlay addSubview:_shootButton];
-    [_shootButton setBackgroundColor:[UIColor whiteColor]];
     
     _finishButton = [[UIButton alloc] initWithFrame:baseButtonframe];
     _finishButton.center = CGPointMake(_resetButton.center.x + _finishButton.frame.size.width, _resetButton.center.y);
@@ -146,10 +149,12 @@ CGRect baseButtonframe;
 
 - (void)finishSel {
     UIImage *img = [self mergeIMG:_pics withParams:YES height:2];
-    UIImageView *imgView = [[UIImageView alloc] initWithImage:img];
-    imgView.contentMode = UIViewContentModeScaleAspectFit;
-    [imgView setFrame:CGRectMake(0, 0, imgView.frame.size.width * 0.5, imgView.frame.size.height * 0.5)];
+    UIImageView *imgView = [[UIImageView alloc] initWithFrame:baseButtonframe];
     imgView.center = self.view.center;
+    imgView.contentMode = UIViewContentModeScaleAspectFit;
+    [imgView setImage:img];
+    [_overlay addSubview:imgView];
+    NSLog(@"Hello World!");
 }
 
 #pragma mark Image picker
@@ -182,10 +187,7 @@ CGRect baseButtonframe;
     NSLog(@"Nope");
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
+
 
 #pragma mark IMG Merge
 
@@ -207,7 +209,7 @@ CGRect baseButtonframe;
 
 - (CGPoint)positionWith:(BOOL)leftToRight height:(int)height iteration:(int)i {
     CGPoint pt = CGPointMake(0, 0);
-    int row = ++i % height;
+    int row = i % height;
     int col = (i + height - 1) / height;
     
     pt.y = row * _overlay.frame.size.height;
