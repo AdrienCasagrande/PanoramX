@@ -59,7 +59,6 @@ CGRect baseButtonframe;
     [_resetButton setTitle:@"Reset" forState:UIControlStateNormal]; // titre
     [_resetButton addTarget:self action:@selector(resetSel) forControlEvents:UIControlEventTouchUpInside]; // la fonction du bouton
     [_overlay addSubview:_resetButton]; // on l ajoute a la page
-    [_resetButton setBackgroundColor:[UIColor whiteColor]];
     
     // bouton shoot
     _shootButton = [[UIButton alloc] initWithFrame:baseButtonframe];
@@ -67,14 +66,20 @@ CGRect baseButtonframe;
                                       _overlay.frame.size.height - baseButtonframe.size.height);
     [_shootButton setTitle:@"Shoot" forState:UIControlStateNormal];
     [_shootButton addTarget:self action:@selector(shootSel) forControlEvents:UIControlEventTouchUpInside];
+    
+    UIImage *buttonCapture = [UIImage imageNamed:@"icon-photo.png"];
+    [_resetButton setBackgroundImage:buttonCapture forState:UIControlStateNormal];
     [_overlay addSubview:_shootButton];
-    [_shootButton setBackgroundColor:[UIColor whiteColor]];
     
     _finishButton = [[UIButton alloc] initWithFrame:baseButtonframe];
     _finishButton.center = CGPointMake(_resetButton.center.x + _finishButton.frame.size.width, _resetButton.center.y);
     [_finishButton setTitle:@"Finish" forState:UIControlStateNormal];
     [_finishButton addTarget:self action:@selector(finishSel) forControlEvents:UIControlEventTouchUpInside];
+    
+    UIImage *buttonFinish = [UIImage imageNamed:@"validate_360.png"];
+    [_finishButton setBackgroundImage:buttonFinish forState:UIControlStateNormal];
     [_overlay addSubview:_finishButton];
+    
 }
 
 - (void)setupGuides {
