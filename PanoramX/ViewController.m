@@ -67,7 +67,7 @@ CGRect baseButtonframe;
     [_shootButton setTitle:@"Shoot" forState:UIControlStateNormal];
     [_shootButton addTarget:self action:@selector(shootSel) forControlEvents:UIControlEventTouchUpInside];
     
-    UIImage *buttonCapture = [UIImage imageNamed:@"icon-photo.png"];
+    UIImage *buttonCapture = [UIImage imageNamed:@"icon-photo_360.png"];
     [_resetButton setBackgroundImage:buttonCapture forState:UIControlStateNormal];
     [_overlay addSubview:_shootButton];
     
