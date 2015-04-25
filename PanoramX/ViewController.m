@@ -183,7 +183,7 @@ CMAttitude *referenceAttitude;
     _picker.showsCameraControls = NO;
     _picker.navigationBarHidden = YES;
     
-    _picker.cameraOverlayView = _overlay;
+    _picker.cameraOverlayView = _totio;
     
     [self presentViewController:_picker animated:YES completion:NULL];
 }
