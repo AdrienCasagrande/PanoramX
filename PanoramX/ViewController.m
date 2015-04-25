@@ -202,6 +202,8 @@ CGRect baseButtonframe;
     CGSize size = CGSizeMake(w, h);
     UIGraphicsBeginImageContext(size);
     
+    NSLog(@"h=%f frameh=%f", h, _overlay.frame.size.height);
+    
     for (int i = 0; i < _pics.count; i++) {
         [(UIImage *)_pics[i] drawAtPoint:[self positionWith:leftToRight height:height iteration:i]];
     }
@@ -215,7 +217,9 @@ CGRect baseButtonframe;
 - (CGPoint)positionWith:(BOOL)leftToRight height:(int)height iteration:(int)i {
     CGPoint pt = CGPointMake(0, 0);
     int row = (i + 1) % height;
-    int col = (i + height - 1) / height;
+    int col = (i + height -2) / height;
+    
+    NSLog(@"i=%u row=%u col=%u", i, row, col);
     
     pt.y = row * _overlay.frame.size.height;
     if (leftToRight) {
