@@ -10,6 +10,7 @@
 		51E431D01AEA833700CAB4E3 /* validate_360.png in Resources */ = {isa = PBXBuildFile; fileRef = 51E431CF1AEA833700CAB4E3 /* validate_360.png */; };
 		51E431DA1AEA8F8600CAB4E3 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 51E431D91AEA8F8600CAB4E3 /* icon.png */; };
 		7A293E5E1AEA8E87005DE19F /* toto.png in Resources */ = {isa = PBXBuildFile; fileRef = 51E431D71AEA868400CAB4E3 /* toto.png */; };
+		7A293E681AEBF334005DE19F /* cible.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A293E671AEBF334005DE19F /* cible.png */; };
 		7A9FB4521AE9618C006A48AB /* PositionGuide.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A9FB4511AE9618C006A48AB /* PositionGuide.m */; };
 		7A9FB4551AE9637C006A48AB /* UIView+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A9FB4541AE9637C006A48AB /* UIView+Utils.m */; };
 		CF0EEAA11AE7834100B264C2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CF0EEAA01AE7834100B264C2 /* main.m */; };
@@ -36,6 +37,7 @@
 		51E431CF1AEA833700CAB4E3 /* validate_360.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = validate_360.png; sourceTree = "<group>"; };
 		51E431D71AEA868400CAB4E3 /* toto.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = toto.png; sourceTree = "<group>"; };
 		51E431D91AEA8F8600CAB4E3 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
+		7A293E671AEBF334005DE19F /* cible.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cible.png; sourceTree = "<group>"; };
 		7A9FB4501AE9618C006A48AB /* PositionGuide.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PositionGuide.h; sourceTree = "<group>"; };
 		7A9FB4511AE9618C006A48AB /* PositionGuide.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PositionGuide.m; sourceTree = "<group>"; };
 		7A9FB4531AE9637C006A48AB /* UIView+Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Utils.h"; sourceTree = "<group>"; };
@@ -95,6 +97,7 @@
 		CF0EEA9D1AE7834100B264C2 /* PanoramX */ = {
 			isa = PBXGroup;
 			children = (
+				7A293E671AEBF334005DE19F /* cible.png */,
 				CF0EEAA21AE7834100B264C2 /* AppDelegate.h */,
 				CF0EEAA31AE7834100B264C2 /* AppDelegate.m */,
 				51E431CF1AEA833700CAB4E3 /* validate_360.png */,
@@ -225,6 +228,7 @@
 				CF0EEAAD1AE7834100B264C2 /* Main.storyboard in Resources */,
 				7A293E5E1AEA8E87005DE19F /* toto.png in Resources */,
 				51E431DA1AEA8F8600CAB4E3 /* icon.png in Resources */,
+				7A293E681AEBF334005DE19F /* cible.png in Resources */,
 				CF0EEAB21AE7834100B264C2 /* LaunchScreen.xib in Resources */,
 				51E431D01AEA833700CAB4E3 /* validate_360.png in Resources */,
 				CF0EEAAF1AE7834100B264C2 /* Images.xcassets in Resources */,

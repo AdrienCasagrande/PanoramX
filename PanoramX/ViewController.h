@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <CoreMotion/CoreMotion.h>
 #import "UIView+Utils.h"
 
 @interface ViewController : UIViewController <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
@@ -20,6 +21,12 @@
 @property (strong, nonatomic) UIImagePickerController *picker;
 @property (strong, nonatomic) NSMutableArray *pics;
 @property (strong, nonatomic) UIImageView *preview;
+
+@property (strong, nonatomic) UIView *verticalPointer;
+@property (strong, nonatomic) UIView *horizontalPointer;
+@property (strong, nonatomic) UIView *indicator;
+
+@property int height;
 
 @end
 
