@@ -31,16 +31,26 @@ CMAttitude *referenceAttitude;
     baseButtonframe = CGRectMake(0, 0, 100, 100);
     _overlap = [NSDictionary dictionaryWithObjectsAndKeys:[[UIImageView alloc] initWithFrame:self.view.bounds], @"down",
                                                           [[UIImageView alloc] initWithFrame:self.view.bounds], @"left", nil];
-    _height = 1;
+    //_height = 1;
 }
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     [self overlaySetup];
     motionManager = [[CMMotionManager alloc] init];
+    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Hauteur" message:@"Pouvez vous prendre le rayon sur toute ca hauteur en une fois ?" delegate:self cancelButtonTitle:@"Non" otherButtonTitles:@"Oui", nil];
+    [alertView show];
 }
 
-
+- (void)alertView:(UIAlertView *)alertView willDismissWithButtonIndex:(NSInteger)buttonIndex {
+    if ([alertView.title isEqualToString:@"Hauteur"] && buttonIndex == 1) {
+        if (buttonIndex == 1) {
+            _height = 1;
+        } else if (buttonIndex == 0) {
+            _height = 2;
+        }
+    }
+}
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
