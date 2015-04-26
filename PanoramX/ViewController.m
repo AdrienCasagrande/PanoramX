@@ -31,7 +31,7 @@ CMAttitude *referenceAttitude;
     baseButtonframe = CGRectMake(0, 0, 100, 100);
     _overlap = [NSDictionary dictionaryWithObjectsAndKeys:[[UIImageView alloc] initWithFrame:self.view.bounds], @"down",
                                                           [[UIImageView alloc] initWithFrame:self.view.bounds], @"left", nil];
-    _height = 2;
+    _height = 1;
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -62,6 +62,8 @@ CMAttitude *referenceAttitude;
     overlayWidth = _overlay.frame.size.width;
     [self setupButtons];
     [self setupGuides];
+    [_overlay insertSubview:_overlap[@"down"] atIndex:0];
+    [_overlay insertSubview:_overlap[@"left"] atIndex:0];
 }
 
 
@@ -97,12 +99,10 @@ CMAttitude *referenceAttitude;
 - (void)setupGuides {
     [self addGuideFrom:CGPointMake(overlayWidth * bordure, 0)
                     to:CGPointMake(overlayWidth * bordure, overlayHeight)];
-    [self addGuideFrom:CGPointMake(overlayWidth * (1 - bordure), 0)
-                    to:CGPointMake(overlayWidth * (1 - bordure), overlayHeight)];
-    [self addGuideFrom:CGPointMake(0, overlayHeight * bordure)
-                    to:CGPointMake(overlayWidth, overlayHeight * bordure)];
-    [self addGuideFrom:CGPointMake(0, overlayHeight * (1 - bordure))
+    if (_height == 2) {
+        [self addGuideFrom:CGPointMake(0, overlayHeight * (1 - bordure))
                     to:CGPointMake(overlayWidth, overlayHeight * (1 - bordure))];
+    }
 }
 
 - (void)addGuideFrom:(CGPoint)start to:(CGPoint)end {
@@ -123,16 +123,30 @@ CMAttitude *referenceAttitude;
 }
 
 - (void)displayOverlap {
+    if (_height == 2) {
+        [self overlapTwo];
+    } else {
+        [self overlapOne];
+    }
+}
+
+- (void)overlapOne {
+    [UIView animateWithDuration:0.5 animations:^{
+        [(UIImageView *) _overlap[@"left"] setFrame:CGRectMake(- overlayWidth * (1 - bordure), 0,
+                                                               overlayWidth, overlayHeight)];
+        [(UIImageView *) _overlap[@"left"] setAlpha:0.8];
+    }];
+}
+
+- (void)overlapTwo {
     if (_pics.count % 2 == 1) {
-        [_overlay insertSubview:_overlap[@"down"] atIndex:0];
         [UIView animateWithDuration:0.5 animations:^{
+            
             [(UIImageView *) _overlap[@"down"] setFrame:CGRectMake(0, overlayHeight * (1 - bordure),
                                                                    overlayWidth, overlayHeight)];
             [(UIImageView *) _overlap[@"down"] setAlpha:0.8];
         }];
-    }
-    else {
-        [_overlay insertSubview:_overlap[@"left"] atIndex:0];
+    } else {
         [UIView animateWithDuration:0.5 animations:^{
             [(UIImageView *) _overlap[@"down"] setFrame:CGRectMake(- overlayWidth * (1 - bordure), 0,
                                                                    overlayWidth, overlayHeight)];
@@ -155,7 +169,10 @@ CMAttitude *referenceAttitude;
     _overlap = [NSDictionary dictionaryWithObjectsAndKeys:
                 [[UIImageView alloc] initWithFrame:self.view.bounds], @"down",
                 [[UIImageView alloc] initWithFrame:self.view.bounds], @"left", nil];
+    [_overlay insertSubview:_overlap[@"down"] atIndex:0];
+    [_overlay insertSubview:_overlap[@"left"] atIndex:0];
     [_preview removeFromSuperview];
+    [self startMotionDetection];
 }
 
 - (void)shootSel {
@@ -163,6 +180,7 @@ CMAttitude *referenceAttitude;
 }
 
 - (void)finishSel {
+    [motionManager stopDeviceMotionUpdates];
     UIImage *img = [self mergeIMG:_pics withParams:YES height:_height];
     float w = img.size.height > img.size.width ? self.view.frame.size.width * 0.7 : self.view.frame.size.width;
     float h = ((img.size.width * w) / 100) * img.size.height;
@@ -183,16 +201,19 @@ CMAttitude *referenceAttitude;
     _picker.showsCameraControls = NO;
     _picker.navigationBarHidden = YES;
     
-    _picker.cameraOverlayView = _totio;
+    _picker.cameraOverlayView = _overlay;
+    
+    [[_overlay layer] setBorderColor: [UIColor redColor].CGColor];
     
     [self presentViewController:_picker animated:YES completion:NULL];
 }
 
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
     [_pics addObject:info[UIImagePickerControllerOriginalImage]];
-    if (_pics.count % 2 == 1) {
+    if (_pics.count % _height == 1) {
         [_overlap[@"down"] setFrame:_overlay.frame];
         [_overlap[@"down"] setImage:info[UIImagePickerControllerOriginalImage]];
+        [_overlap[@"left"] setImage:nil];
     } else {
         [_overlap[@"left"] setFrame:_overlay.frame];
         [_overlap[@"left"] setImage:info[UIImagePickerControllerOriginalImage]];
@@ -216,6 +237,7 @@ CMAttitude *referenceAttitude;
     
     for (int i = 0; i < _pics.count; i++) {
         [(UIImage *)_pics[i] drawAtPoint:[self positionWith:leftToRight height:height iteration:i picSize:size]];
+        NSLog(@"pic=%d", i);
     }
     
     UIImage *img = UIGraphicsGetImageFromCurrentImageContext();
@@ -227,8 +249,9 @@ CMAttitude *referenceAttitude;
 - (CGPoint)positionWith:(BOOL)leftToRight height:(int)height iteration:(int)i picSize:(CGSize)size {
     CGPoint pt = CGPointMake(0, 0);
     int row = (i + 1) % height;
-    int col = (i + height -2) / height;
+    int col = i / height;
     
+    NSLog(@"col=%d row=%d", col, row);
     pt.y = row * size.height;
     if (leftToRight) {
         pt.x = col * size.width;
